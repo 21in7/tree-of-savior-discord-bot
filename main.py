@@ -48,4 +48,4 @@ class MyBot(commands.Bot):
 
 bot = MyBot()
 bot.remove_command("help")
-bot.run()
+bot.run(input your token)
