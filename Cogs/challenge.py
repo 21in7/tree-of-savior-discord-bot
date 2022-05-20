@@ -66,7 +66,7 @@ class challenge(commands.Cog):
             await interaction.response.send_message(file=tomorrow_file, embed=tomorrow_embed)
 
         async def burning_callback(interaction: discord.Interaction):
-            await interaction.response.send_message(file=File("./burning/5mb.jpg"))
+            await interaction.response.send_message(file=File("./img/unknown.png"))
 
         async def tjdanf_callback(interaction: discord.Interaction):
             await interaction.response.send_message(file=File("./img/db28631695a79b9e.jpg"))
