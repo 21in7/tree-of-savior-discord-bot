@@ -69,7 +69,7 @@ class challenge(commands.Cog):
             await interaction.response.send_message(file=File("./burning/5mb.jpg"))
 
         async def tjdanf_callback(interaction: discord.Interaction):
-            await interaction.response.send_message(file=File("./면류관.jpg"))
+            await interaction.response.send_message(file=File("./img/면류관.jpg"))
 
         # async def tavern_callback(interaction: discord.Interaction):
         #    await interaction.response.send_message("https://ktos.tavernofsoul.com/")
