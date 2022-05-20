@@ -25,7 +25,7 @@ class MyBot(commands.Bot):
             command_prefix='!',
             intents=discord.Intents.all(),
             sync_commands=True,
-            application_id=965971425364172810
+            application_id=input your application id
         )
         self.initial_extension = [
             "Cogs.challenge"
