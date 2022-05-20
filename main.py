@@ -1,10 +1,9 @@
-import asyncio
+#모듈 불러오기
 import discord
 from discord.ext import commands
 import bot_token
 import logging
 import logging.handlers
-import os
 
 #로그 파일 갯수랑 용량 지정
 LOG_MAX_SIZE = 1024*1024*10
