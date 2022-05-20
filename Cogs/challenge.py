@@ -1,3 +1,4 @@
+#모듈 불러오기
 import discord
 from discord import File
 from discord import app_commands
