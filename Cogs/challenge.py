@@ -1,4 +1,4 @@
-#모듈 불러오기
+# 모듈 불러오기
 import discord
 from discord import File
 from discord import app_commands
@@ -23,12 +23,12 @@ class challenge(commands.Cog):
         str_now = str(d.strftime("%y-%m-%d\n"))
         # 홀수달 짝수달 구분
         if d.month % 2 == 0:
-            #짝수달 이면
+            # 짝수달 이면
             col = 2
             send_message = ((load_ws.cell(d.day, col).value))
             wb.close()
         else:
-            #홀수달 이면
+            # 홀수달 이면
             col = 1
             send_message = ((load_ws.cell(d.day, col).value))
             wb.close()
@@ -41,14 +41,14 @@ class challenge(commands.Cog):
         tomorrow = d + datetime.timedelta(days=1)
         strftime_tomorrow = int(tomorrow.strftime("%d"))
         str_tomorrow = str(tomorrow.strftime("%y-%m-%d\n"))
-        #홀수달 짝수달 구분
+        # 홀수달 짝수달 구분
         if d.month % 2 == 0:
-            #짝수달 이면
+            # 짝수달 이면
             co = 2
             to_challange = ((load_ws.cell(strftime_tomorrow, co).value))
             wb.close()
         else:
-            #홀수달 이면
+            # 홀수달 이면
             co = 1
             to_challange = ((load_ws.cell(strftime_tomorrow, co).value))
             wb.close()
@@ -59,23 +59,26 @@ class challenge(commands.Cog):
         tomorrow_embed.set_image(url="attachment://image.jpg")
         tomorrow_embed.set_footer(
             text="루틴표 제공 : 튼튼 한입할게요 \n맵 파일 제공 : 튼튼 한입할게요 \n봇 문의 : 병아리 기현")
-        #
+
         today = Button(label="오늘의 챌", style=discord.ButtonStyle.green)
         tomorrow = Button(label="내일의 챌", style=discord.ButtonStyle.primary)
-        burning = Button(label="5월 버닝", style=discord.ButtonStyle.danger)
+        burning = Button(label="이달의 버닝", style=discord.ButtonStyle.danger)
         tjdanf = Button(label="면류관", style=discord.ButtonStyle.gray)
         tavern = Button(label="tavernofsoul", style=discord.ButtonStyle.link,
                         url="https://ktos.tavernofsoul.com/")
+
         async def today_callback(interaction: discord.Interaction):
             await interaction.response.send_message(file=today_file, embed=today_embed)
+
         async def tommorow_callback(interaction: discord.Interaction):
             await interaction.response.send_message(file=tomorrow_file, embed=tomorrow_embed)
+
         async def burning_callback(interaction: discord.Interaction):
-            await interaction.response.send_message(file=File("./img/unknown.png"))
+            await interaction.response.send_message(file=File("./img/6b.jpg"))
+
         async def tjdanf_callback(interaction: discord.Interaction):
             await interaction.response.send_message(file=File("./img/db28631695a79b9e.jpg"))
 
-        
         today.callback = today_callback
         tomorrow.callback = tommorow_callback
         burning.callback = burning_callback
