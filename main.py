@@ -1,15 +1,15 @@
-#모듈 불러오기
+# 모듈 불러오기
 import discord
 from discord.ext import commands
 import bot_token
 import logging
 import logging.handlers
 
-#로그 파일 갯수랑 용량 지정
+# 로그 파일 갯수랑 용량 지정
 LOG_MAX_SIZE = 1024*1024*10
 LOG_FILE_CNT = 100
 
-#로그 저장
+# 로그 저장
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.handlers.RotatingFileHandler(
@@ -26,10 +26,12 @@ class MyBot(commands.Bot):
             command_prefix='!',
             intents=discord.Intents.all(),
             sync_commands=True,
-            application_id=input your application id
+            application_id=965971425364172810
         )
         self.initial_extension = [
-            "Cogs.challenge"
+            "Cogs.challenge",
+            "Cogs.prefix_call",
+            "Cogs.search_buff"
         ]
 
     async def setup_hook(self):
@@ -48,4 +50,4 @@ class MyBot(commands.Bot):
 
 bot = MyBot()
 bot.remove_command("help")
-bot.run(input your token)
+bot.run(bot_token.main_token)
