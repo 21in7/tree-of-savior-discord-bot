@@ -1,7 +1,5 @@
 from discord.ext import commands
-from discord import app_commands
-from discord import Interaction
-from discord import Object
+from discord import app_commands, Interaction
 import requests
 from bs4 import BeautifulSoup as bs
 

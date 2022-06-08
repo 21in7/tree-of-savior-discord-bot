@@ -1,11 +1,7 @@
-import discord
-from discord import Interaction
-from discord import File
+from discord import File, Embed
 from discord.ext import commands
 import datetime
 import openpyxl
-from discord import Embed
-from discord import File
 
 wb = openpyxl.load_workbook('challenge.xlsx')
 load_ws = wb['Sheet1']
