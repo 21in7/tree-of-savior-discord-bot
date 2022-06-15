@@ -60,6 +60,7 @@ class challenge(commands.Cog):
         tomorrow = Button(label="내일의 챌", style=ButtonStyle.primary)
         burning = Button(label="이달의 버닝", style=ButtonStyle.danger)
         tjdanf = Button(label="면류관", style=ButtonStyle.gray)
+        Season_relic = Button(label="시즌서버 면류관", style=ButtonStyle.blurple)
         tavern = Button(label="tavernofsoul", style=ButtonStyle.link,
                         url="https://ktos.tavernofsoul.com/")
 
@@ -75,16 +76,21 @@ class challenge(commands.Cog):
         async def tjdanf_callback(interaction: Interaction):
             await interaction.response.send_message(file=File("./img/db28631695a79b9e.jpg"))
 
+        async def Season_relic_callback(interaction: Interaction):
+            await interaction.response.send_message(file=File("./img/season_relic.jpg"))
+
         today.callback = today_callback
         tomorrow.callback = tommorow_callback
         burning.callback = burning_callback
         tjdanf.callback = tjdanf_callback
+        Season_relic.callback = Season_relic_callback
         view = View()
         view.add_item(today)
         view.add_item(tomorrow)
         view.add_item(burning)
         view.add_item(tjdanf)
         view.add_item(tavern)
+        view.add_item(Season_relic)
         await interaction.response.send_message("메뉴를 선택해주세요", view=view)
 
 
