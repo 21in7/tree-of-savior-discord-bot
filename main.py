@@ -23,7 +23,7 @@ class MyBot(commands.Bot):
 
     def __init__(self):
         super().__init__(
-            command_prefix='!',
+            command_prefix='#',
             intents=discord.Intents.all(),
             sync_commands=True,
             application_id=965971425364172810
