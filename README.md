@@ -13,3 +13,6 @@ pip install openpyxl
 /메뉴(menu), #챌(today challenge map), #내일(tomorrow challenge map)
 
 
+### contect
+mail : gihyeon@gihyeon.com
+discord : 21in7#0523
