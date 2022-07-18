@@ -84,7 +84,7 @@ class challenge(commands.Cog):
         burning.callback = burning_callback
         tjdanf.callback = tjdanf_callback
         Season_relic.callback = Season_relic_callback
-        view = View()
+        view = View(timeout=None)
         view.add_item(today)
         view.add_item(tomorrow)
         view.add_item(burning)
