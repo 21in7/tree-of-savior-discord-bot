@@ -31,7 +31,9 @@ class MyBot(commands.Bot):
         self.initial_extension = [
             "Cogs.challenge",
             "Cogs.prefix_call",
-            "Cogs.search_buff"
+            "Cogs.search_buff",
+            "Cogs.randomjpg",
+            "Cogs.10000jpg"
         ]
 
     async def setup_hook(self):
